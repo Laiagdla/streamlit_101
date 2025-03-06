@@ -14,6 +14,13 @@ st.markdown("""
 
     ---
 """)
+checkbox_disabled = True
+if st.checkbox("click me more"):
+    checkbox_disabled = False
+    st.write("oh yes")
+
+st.checkbox("and more", disabled=checkbox_disabled, value=not checkbox_disabled)
+
 
 
 clicked = st.button('click me')
